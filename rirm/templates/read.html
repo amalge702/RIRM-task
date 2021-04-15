@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read by row</title>
+
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0OpxUhoYktbKHqdGw3DYng8C1MxGLWU0aMA&usqp=CAU">
+<style>
+    input[type=submit] {
+  background: linear-gradient(135deg, orange 60%, cyan);
+  width:5%;
+  color: white;
+}
+</style>
+</head>
+<body>
+{% include "index.html" %}
+<br/>
+<p style="color:red;font-family:arial;text-align:center"><i>{{msg}}</i></p>
+<form action= "/rirm/search/" method="post">
+    {% csrf_token %}
+    <br/>
+
+    Enter Firstname:<input type="text" name="Name" value="" required/>
+    <br/>
+    <br/>
+
+    <input class="=btn" id="submit" type="submit" value="OK"/>
+</form>
+</div>
+
+
+
+
+</body>
+</html>

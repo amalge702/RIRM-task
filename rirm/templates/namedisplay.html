@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table Header</title>
+   </head>
+<style>
+    style>
+      .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table {margin-left: auto;
+  margin-right: auto;
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+#employeetr:nth-child(even){background-color: ##ff668c;}
+
+#employee tr:hover {background-color: #ddd;}
+.bttn {
+
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.hidetext { -webkit-text-security: disc;}
+
+
+</style>
+   <body>
+{% include "index.html" %}
+   <br/><br/>
+   <table class="styled-table" border = "2",width="30%">
+
+        <tr>
+            <th>Id </th>
+            <th>Name </th>
+            <th>URL</th>
+            <th>Phone No</th>
+
+        </tr>
+
+
+          <tr>
+                    <td>{{name.id}}</td>
+                   <td>{{ name.Name}} </td>
+                   <td>{{ emps.URL}} </td>
+                   <td>{{ name.phone_number}}</td>
+
+
+
+
+          </tr>
+
+   </table>
+   </body>
+
+</html>
